@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convite interativo dos 15 anos da Larissa">
+  <meta name="theme-color" content="#031b43">
+  <title>15 Anos da Larissa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="convite">
+
+    <section class="capa capa-imagem" id="inicio">
+      <img
+        class="arte-capa"
+        src="assets/capa-final.png"
+        alt="Convite de 15 anos da Larissa em azul-marinho e dourado, com flores, castelo e estrelas"
+      >
+
+      <div class="particulas-douradas" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="brilho-capa" aria-hidden="true"></div>
+
+      <div class="portas-convite" id="portasConvite" aria-hidden="true">
+        <div class="porta porta-esquerda"></div>
+        <div class="porta porta-direita"></div>
+        <div class="fecho-portas">✦</div>
+      </div>
+
+      <button
+        type="button"
+        class="area-abrir-convite"
+        id="botaoAbrir"
+        aria-label="Abrir o convite e iniciar a música"
+      ></button>
+
+      <button
+        type="button"
+        class="botao-musica-capa"
+        id="botaoMusicaCapa"
+        aria-label="Ativar ou pausar a música instrumental"
+      >
+        ♪ Instrumental
+      </button>
+    </section>
+
+    <section class="painel mensagem revelar" id="mensagem">
+      <div class="moldura-clara">
+        <div class="mini-coroa" aria-hidden="true">♛</div>
+
+        <p>
+          Com imensa alegria, convido você para celebrar comigo
+          a realização de um dos dias mais especiais da minha história.
+        </p>
+
+        <div class="ornamento" aria-hidden="true">❧</div>
+
+        <p class="destaque">
+          Sua presença tornará esta noite ainda mais inesquecível!
+        </p>
+
+        <span class="coracao-dourado" aria-hidden="true">♥</span>
+      </div>
+    </section>
+
+    <section class="painel detalhes revelar" id="detalhes">
+      <h2>Detalhes da festa</h2>
+
+      <article class="detalhe-item">
+        <span class="icone" aria-hidden="true">📅</span>
+        <div>
+          <span class="rotulo">Data</span>
+          <strong>19 de setembro de 2026</strong>
+        </div>
+      </article>
+
+      <article class="detalhe-item">
+        <span class="icone" aria-hidden="true">🕗</span>
+        <div>
+          <span class="rotulo">Horário</span>
+          <strong>20h</strong>
+        </div>
+      </article>
+
+      <article class="detalhe-item">
+        <span class="icone" aria-hidden="true">📍</span>
+        <div>
+          <span class="rotulo">Local</span>
+          <strong>
+            Rua Mirian Strambi, 290<br>
+            Recreio Anhanguera<br>
+            Ribeirão Preto/SP<br>
+            CEP 14097-052
+          </strong>
+        </div>
+      </article>
+
+      <article class="detalhe-item">
+        <span class="icone" aria-hidden="true">👗</span>
+        <div>
+          <span class="rotulo">Traje</span>
+          <strong>Gala / Passeio Completo</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="painel confirmacao revelar" id="confirmacao">
+      <h2>Confirme sua presença</h2>
+
+      <p>
+        Sua confirmação é muito importante para mim.<br>
+        Confirme até <strong>05/09/2026</strong>.
+      </p>
+
+      <a class="botao-redondo desativado" id="confirmarPresenca" href="#" aria-disabled="true">
+        <span class="borboleta" aria-hidden="true">🦋</span>
+        Clique aqui<br>
+        para confirmar<br>
+        sua presença
+      </a>
+
+      <p class="aviso-configuracao" id="avisoWhatsapp">
+        O botão será ativado quando o número do WhatsApp for definido.
+      </p>
+
+      <div class="acoes">
+        <a class="acao" href="https://share.google/xaznzonXuuAo2zmHo" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">📍</span>
+          Ver localização
+        </a>
+
+        <button class="acao" id="abrirPresentes" type="button">
+          <span aria-hidden="true">🎁</span>
+          Lista de presentes
+        </button>
+      </div>
+    </section>
+
+    <footer class="rodape revelar">
+      <blockquote>
+        “A verdadeira elegância está nos momentos compartilhados com pessoas especiais.”
+      </blockquote>
+      <span aria-hidden="true">♥</span>
+    </footer>
+
+    <section
+      class="modal-presentes"
+      id="modalPresentes"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tituloPresentes"
+    >
+      <div class="modal-conteudo">
+        <button
+          class="fechar-modal"
+          id="fecharPresentes"
+          type="button"
+          aria-label="Fechar lista de presentes"
+        >
+          ×
+        </button>
+
+        <h2 id="tituloPresentes">Lista de presentes</h2>
+
+        <p class="introducao-presentes">
+          O melhor presente será sua presença, mas, caso deseje me presentear,
+          seguem algumas sugestões:
+        </p>
+
+        <ul class="lista-presentes">
+          <li>
+            <span aria-hidden="true">💍</span>
+            <strong>Jóias</strong>
+            <small>Anéis nº 20</small>
+          </li>
+
+          <li>
+            <span aria-hidden="true">💄</span>
+            <strong>Maquiagem</strong>
+          </li>
+
+          <li>
+            <span aria-hidden="true">👗</span>
+            <strong>Roupas</strong>
+            <small>Tamanho G</small>
+          </li>
+
+          <li>
+            <span aria-hidden="true">👠</span>
+            <strong>Sapatos</strong>
+            <small>Numeração 38/39</small>
+          </li>
+
+          <li>
+            <span aria-hidden="true">🌸</span>
+            <strong>Perfumes</strong>
+            <small>Fragrâncias doces ou amadeiradas</small>
+          </li>
+        </ul>
+
+        <p class="agradecimento-presentes">
+          Obrigada por fazer parte deste momento tão especial!
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <button type="button" class="controle-musica" id="controleMusica" aria-label="Ativar música" hidden>
+    ♪
+  </button>
+
+  <audio id="musica" loop preload="auto">
+    <source src="assets/audio/instrumental-convite.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
